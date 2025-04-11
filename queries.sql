@@ -19,7 +19,7 @@ SELECT
 FROM 
     compras_cliente
 WHERE 
-    fecha BETWEEN '2025-03-01' AND '2025-03-31';
+    fecha BETWEEN '2025-04-01' AND '2025-04-03';
 
 
 -- 3.  Obtener el cliente con más compras realizadas.

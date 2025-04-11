@@ -1,66 +1,225 @@
 -- Inserts 
 
--- Insertar ciudades
-INSERT INTO ciudad (nombre) VALUES
-('Bucaramanga'),
-('Cúcuta'),
-('Barrancabermeja'),
-('Floridablanca'),
-('Piedecuesta');
+INSERT INTO ciudad (nombre) VALUES 
+('Ciudad de México'), 
+('Buenos Aires'), 
+('Madrid'), 
+('Bogotá'), 
+('Lima'), 
+('Santiago'), 
+('Caracas'), 
+('Quito'), 
+('Montevideo'), 
+('Asunción'), 
+('Guatemala'), 
+('San Salvador'), 
+('La Paz'), 
+('Santo Domingo'), 
+('Brasilia');
 
--- Insertar sucursales
-INSERT INTO sucursal (nombre, direccion, NIT, telefono, idCiudad) VALUES
-('Sucursal Bucaramanga', 'Calle 123 #45-67', '900123456-7', '123456789', 1),
-('Sucursal Cúcuta', 'Avenida 7 #89-01', '900234567-8', '234567890', 2),
-('Sucursal Barrancabermeja', 'Carrera 10 #11-22', '900345678-9', '345678901', 3),
-('Sucursal Floridablanca', 'Calle 5 #67-89', '900456789-0', '456789012', 4),
-('Sucursal Piedecuesta', 'Avenida 3 #45-67', '900567890-1', '567890123', 5);
-
--- Insertar categorías
-INSERT INTO categoria (nombre, descripcion) VALUES
-('Electrónica', 'Dispositivos electrónicos y gadgets'),
-('Muebles', 'Mobiliario para hogar y oficina'),
-('Ropa', 'Prendas de vestir y accesorios'),
-('Alimentos', 'Productos alimenticios y bebidas'),
-('Herramientas', 'Equipos y herramientas para construcción');
-
--- Insertar productos
-INSERT INTO productos (nombre, idCategoria, precio, stock) VALUES
-('Smartphone XYZ', 1, 499.99, 50),
-('Sofa Comfort', 2, 299.99, 20),
-('Camisa Polo', 3, 19.99, 100),
-('Cereal Integral', 4, 3.99, 4),
-('Taladro Eléctrico', 5, 49.99, 30);
+INSERT INTO sucursal (nombre, direccion, NIT, telefono, idCiudad) VALUES 
+('Sucursal Norte', 'Av. Reforma 123', '123456789', '5551234567', 1),
+('Sucursal Sur', 'Calle 45 No. 678', '987654321', '5552345678', 2),
+('Sucursal Este', 'Avenida del Sol 89', '123321123', '5553456789', 3),
+('Sucursal Oeste', 'Calle Las Palmas 200', '543216789', '5554567890', 4),
+('Sucursal Central', 'Calle El Parque 88', '654321987', '5555678901', 5),
+('Sucursal Almería', 'Calle Almería 100', '789654123', '5556789012', 6),
+('Sucursal Valencia', 'Calle Colón 600', '321654987', '5557890123', 7),
+('Sucursal Lima Centro', 'Avenida Pardo 200', '456123789', '5558901234', 8),
+('Sucursal Quito Norte', 'Av. Amazonas 1000', '987123456', '5559012345', 9),
+('Sucursal Barcelona', 'Carrer de Pau 45', '321987654', '5550123456', 10),
+('Sucursal Caracas Este', 'Av. Urdaneta 50', '123456780', '5551234590', 11),
+('Sucursal Buenos Aires Sur', 'Avenida 9 de Julio 450', '654987321', '5552345000', 12),
+('Sucursal Monterrey', 'Avenida Constituyentes 300', '987654312', '5553456001', 13),
+('Sucursal Medellín', 'Carrera 50 400', '321654123', '5554567002', 14),
+('Sucursal San José', 'Calle Central 800', '654987320', '5555678003', 15);
 
 
--- Insertar proveedores
-INSERT INTO proveedor (nombre, telefono, idSucursal) VALUES
-('Proveedor A', '321654987', 1),
-('Proveedor B', '654987321', 2),
-('Proveedor C', '987321654', 3),
-('Proveedor D', '123456789', 4),
-('Proveedor E', '234567890', 5);
+INSERT INTO categoria (nombre, descripcion) VALUES 
+('Electrónica', 'Productos electrónicos de consumo'),
+('Ropa', 'Artículos de vestir para hombres, mujeres y niños'),
+('Alimentos', 'Productos alimenticios frescos y procesados'),
+('Deportes', 'Artículos deportivos y de outdoor'),
+('Hogar', 'Artículos para el hogar y decoración'),
+('Belleza', 'Productos de cuidado personal y belleza'),
+('Juguetes', 'Juguetes para niños y adultos'),
+('Automotriz', 'Accesorios y repuestos para vehículos'),
+('Tecnología', 'Dispositivos de tecnología avanzada'),
+('Salud', 'Productos para la salud y bienestar'),
+('Cultura', 'Libros, música, películas y arte'),
+('Música', 'Instrumentos musicales y accesorios'),
+('Jardinería', 'Productos para el cuidado del jardín'),
+('Mascotas', 'Artículos para el cuidado de mascotas'),
+('Construcción', 'Materiales y herramientas para construcción');
 
--- Insertar relaciones proveedor-producto
-INSERT INTO proveedor_producto (idProductos, idProveedor) VALUES
+INSERT INTO productos (nombre, idCategoria, precio, stock) VALUES 
+('Laptop HP', 1, 850.00, 20),
+('Camiseta Nike', 2, 25.00, 50),
+('Pan integral', 3, 3.50, 100),
+('Pelota de fútbol', 4, 15.00, 30),
+('Sofá de dos plazas', 5, 250.00, 10),
+('Shampoo Pantene', 6, 5.00, 40),
+('Juguete Lego', 7, 30.00, 60),
+('Aceite de motor', 8, 18.00, 25),
+('Smartphone Samsung', 9, 600.00, 15),
+('Vitamina C', 10, 12.00, 70),
+('Libro de historia', 11, 20.00, 90),
+('Guitarra eléctrica', 12, 120.00, 10),
+('Maceta de barro', 13, 7.00, 50),
+('Comida para perro', 14, 10.00, 150),
+('Cemento gris', 15, 8.00, 200);
+
+INSERT INTO proveedor (nombre, telefono, idSucursal) VALUES 
+('Proveedor A', '5550001111', 1),
+('Proveedor B', '5550002222', 2),
+('Proveedor C', '5550003333', 3),
+('Proveedor D', '5550004444', 4),
+('Proveedor E', '5550005555', 5),
+('Proveedor F', '5550006666', 6),
+('Proveedor G', '5550007777', 7),
+('Proveedor H', '5550008888', 8),
+('Proveedor I', '5550009999', 9),
+('Proveedor J', '5550010000', 10),
+('Proveedor K', '5550011111', 11),
+('Proveedor L', '5550012222', 12),
+('Proveedor M', '5550013333', 13),
+('Proveedor N', '5550014444', 14),
+('Proveedor O', '5550015555', 15);
+
+INSERT INTO proveedor_producto (idProductos, idProveedor) VALUES 
 (1, 1),
 (2, 2),
 (3, 3),
 (4, 4),
-(5, 5);
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10),
+(11, 11),
+(12, 12),
+(13, 13),
+(14, 14),
+(15, 15);
 
--- Insertar historial de compras
-INSERT INTO historial_compra (fecha, valorTotal, idProveedor) VALUES
-('2025-04-01', 1000.00, 1),
-('2025-04-02', 1500.00, 2),
-('2025-04-03', 2000.00, 3),
-('2025-04-04', 2500.00, 4),
-('2025-04-05', 3000.00, 5);
+INSERT INTO historial_compra (fecha, valorTotal, idProveedor) VALUES 
+('2025-04-01', 500.00, 1),
+('2025-04-02', 300.00, 2),
+('2025-04-03', 800.00, 3),
+('2025-04-04', 1000.00, 4),
+('2025-04-05', 600.00, 5),
+('2025-04-06', 150.00, 6),
+('2025-04-07', 900.00, 7),
+('2025-04-08', 400.00, 8),
+('2025-04-09', 700.00, 9),
+('2025-04-10', 1100.00, 10),
+('2025-04-11', 200.00, 11),
+('2025-04-12', 1200.00, 12),
+('2025-04-13', 350.00, 13),
+('2025-04-14', 650.00, 14),
+('2025-04-15', 550.00, 15);
 
--- Insertar detalles de compras
-INSERT INTO detalle_historial_compra (idHistorial, idProducto, cantidad, precio_compra) VALUES
-(1, 1, 10, 450.00),
-(2, 2, 15, 280.00),
-(3, 3, 20, 18.00),
-(4, 4, 25, 3.50),
-(5, 5, 30, 45.00);
+INSERT INTO detalle_historial_compra (idHistorial, idProducto, cantidad, precio_compra) VALUES 
+(1, 1, 10, 45.00),
+(2, 2, 20, 15.00),
+(3, 3, 15, 8.00),
+(4, 4, 25, 12.00),
+(5, 5, 5, 50.00),
+(6, 6, 50, 3.00),
+(7, 7, 30, 10.00),
+(8, 8, 40, 4.00),
+(9, 9, 10, 60.00),
+(10, 10, 20, 30.00),
+(11, 11, 5, 70.00),
+(12, 12, 10, 120.00),
+(13, 13, 15, 5.00),
+(14, 14, 10, 20.00),
+(15, 15, 100, 8.00);
+
+INSERT INTO cliente (documento, nombre, apellidos, email, direccion) VALUES 
+(1001, 'Carlos', 'Gomez', 'carlos.gomez@email.com', 'Calle Falsa 123'),
+(1002, 'Ana', 'Lopez', 'ana.lopez@email.com', 'Av. Libertad 456'),
+(1003, 'Juan', 'Martínez', 'juan.martinez@email.com', 'Calle del Sol 789'),
+(1004, 'Maria', 'Perez', 'maria.perez@email.com', 'Av. Siempre Viva 101'),
+(1005, 'Luis', 'Rodriguez', 'luis.rodriguez@email.com', 'Calle 14 202'),
+(1006, 'Sofía', 'Fernández', 'sofia.fernandez@email.com', 'Av. Constitución 303'),
+(1007, 'Miguel', 'Garcia', 'miguel.garcia@email.com', 'Calle 34 404'),
+(1008, 'Laura', 'Martínez', 'laura.martinez@email.com', 'Calle Los Pinos 505'),
+(1009, 'Pedro', 'Hernández', 'pedro.hernandez@email.com', 'Av. Central 606'),
+(1010, 'Gloria', 'Gonzalez', 'gloria.gonzalez@email.com', 'Calle Real 707'),
+(1011, 'Carlos', 'Sánchez', 'carlos.sanchez@email.com', 'Av. Primavera 808'),
+(1012, 'María', 'Romero', 'maria.romero@email.com', 'Calle Nueva 909'),
+(1013, 'Ricardo', 'Torres', 'ricardo.torres@email.com', 'Av. Norte 1010'),
+(1014, 'Verónica', 'Vázquez', 'veronica.vazquez@email.com', 'Calle Oeste 1111'),
+(1015, 'Javier', 'Méndez', 'javier.mendez@email.com', 'Calle Sur 1212');
+
+INSERT INTO compras_cliente (fecha, idCliente, total) VALUES 
+('2025-04-01', 1001, 150.00),
+('2025-04-02', 1002, 300.00),
+('2025-04-03', 1003, 500.00),
+('2025-04-04', 1004, 200.00),
+('2025-04-05', 1005, 100.00),
+('2025-04-06', 1006, 400.00),
+('2025-04-07', 1007, 250.00),
+('2025-04-08', 1008, 350.00),
+('2025-04-09', 1009, 450.00),
+('2025-04-10', 1010, 600.00),
+('2025-04-11', 1011, 700.00),
+('2025-04-12', 1012, 800.00),
+('2025-04-13', 1013, 550.00),
+('2025-04-14', 1014, 650.00),
+('2025-04-15', 1015, 900.00);
+
+INSERT INTO detalle_compra_cliente (idCompra, idProducto, cantidad, precio_unitario) VALUES 
+(1, 1, 1, 100.00),
+(2, 2, 2, 75.00),
+(3, 3, 5, 80.00),
+(4, 4, 10, 20.00),
+(5, 5, 1, 50.00),
+(6, 6, 3, 15.00),
+(7, 7, 2, 25.00),
+(8, 8, 1, 50.00),
+(9, 9, 3, 50.00),
+(10, 10, 4, 70.00),
+(11, 11, 2, 60.00),
+(12, 12, 3, 120.00),
+(13, 13, 5, 20.00),
+(14, 14, 3, 60.00),
+(15, 15, 10, 80.00);
+
+INSERT INTO inventario (idProducto, cantidad, idSucursal) VALUES 
+(1, 10, 1),
+(2, 30, 2),
+(3, 25, 3),
+(4, 15, 4),
+(5, 5, 5),
+(6, 50, 6),
+(7, 40, 7),
+(8, 20, 8),
+(9, 10, 9),
+(10, 60, 10),
+(11, 5, 11),
+(12, 10, 12),
+(13, 15, 13),
+(14, 20, 14),
+(15, 100, 15);
+
+INSERT INTO empleado (nombre, apellidos, email, telefono, cargo, idSucursal) VALUES 
+('Andrés', 'Serrano', 'andres.serrano@email.com', '5559876543', 'Gerente', 1),
+('Lucía', 'Ramírez', 'lucia.ramirez@email.com', '5558765432', 'Asistente', 2),
+('Carlos', 'Castro', 'carlos.castro@email.com', '5557654321', 'Supervisor', 3),
+('Sofía', 'González', 'sofia.gonzalez@email.com', '5556543210', 'Vendedor', 4),
+('Miguel', 'Ruiz', 'miguel.ruiz@email.com', '5555432109', 'Vendedor', 5),
+('María', 'Torres', 'maria.torres@email.com', '5554321098', 'Asistente', 6),
+('José', 'López', 'jose.lopez@email.com', '5553210987', 'Gerente', 7),
+('Laura', 'Fernández', 'laura.fernandez@email.com', '5552109876', 'Supervisor', 8),
+('Ricardo', 'Martínez', 'ricardo.martinez@email.com', '5551098765', 'Vendedor', 9),
+('Eva', 'Morales', 'eva.morales@email.com', '5550987654', 'Vendedor', 10),
+('Carlos', 'Sánchez', 'carlos.sanchez@email.com', '5550876543', 'Asistente', 11),
+('Alejandro', 'Pérez', 'alejandro.perez@email.com', '5550765432', 'Supervisor', 12),
+('Patricia', 'Vázquez', 'patricia.vazquez@email.com', '5550654321', 'Gerente', 13),
+('Fernando', 'Hernández', 'fernando.hernandez@email.com', '5550543210', 'Vendedor', 14),
+('Mónica', 'Jiménez', 'monica.jimenez@email.com', '5550432109', 'Asistente', 15);
+
+
