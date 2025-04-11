@@ -29,8 +29,9 @@ INSERT INTO productos (nombre, idCategoria, precio, stock) VALUES
 ('Smartphone XYZ', 1, 499.99, 50),
 ('Sofa Comfort', 2, 299.99, 20),
 ('Camisa Polo', 3, 19.99, 100),
-('Cereal Integral', 4, 3.99, 200),
+('Cereal Integral', 4, 3.99, 4),
 ('Taladro Eléctrico', 5, 49.99, 30);
+
 
 -- Insertar proveedores
 INSERT INTO proveedor (nombre, telefono, idSucursal) VALUES

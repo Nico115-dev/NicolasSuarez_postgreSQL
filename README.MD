@@ -4,27 +4,11 @@
 
 ---
 
-##  Tecnologías
-
-- PostgreSQL 
-- SQL puro 
-
----
-
-##  Objetivos del Sistema
-
-1. Automatizar el control de inventario por sucursal.
-2. Registrar compras de clientes y compras a proveedores.
-3. Mantener un historial completo de ventas y abastecimiento.
-4. Gestionar información de proveedores, empleados y sucursales.
-5. Obtener reportes de productos más vendidos, stock disponible, etc.
-
----
-
 ## Cómo usar
 
 1. Asegúrate de tener PostgreSQL instalado.
-2. Crea una nueva base de datos:
+2. Clona este repositorio 
+3. Crea una nueva base de datos:
    ```sql
    CREATE DATABASE techzone;
-3. Ejecuta el script SQL 
+4. Ejecuta el script SQL 
