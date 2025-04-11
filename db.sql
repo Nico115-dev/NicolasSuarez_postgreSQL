@@ -41,7 +41,7 @@ CREATE TABLE proveedor (
     FOREIGN KEY (idSucursal) REFERENCES sucursal(id)
 );
 
--- Tabla proveedor_producto (relación muchos a muchos)
+-- Tabla proveedor_producto
 CREATE TABLE proveedor_producto (
     id SERIAL PRIMARY KEY,
     idProductos INTEGER,
